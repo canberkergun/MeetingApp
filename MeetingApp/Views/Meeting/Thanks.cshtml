@@ -1,0 +1,21 @@
+﻿@model UserInfo
+@{
+    ViewData["Title"] = "Attendance Status";
+}
+<main class="text-center">
+    <h1 class="h4">Summary</h1>
+
+    @if(Model.WillAttend == true)
+    {
+        <p>Thank you @Model.Name for your participation. There will be total of @ViewBag.UserCount people participating</p>
+        <a class="btn btn-sm btn-outline-primary" href="/meeting/list">List Participants</a>
+    }
+    else
+    {
+        <p>@Model.Name we are sorry to not having you.</p>
+        <a class="btn btn-sm btn-outline-primary" href="/meeting/apply">Apply Form</a>
+    }
+
+
+    
+</main>
